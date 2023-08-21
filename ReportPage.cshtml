@@ -1,0 +1,19 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section head {
+    <link rel="stylesheet" type="text/css" href="~/Content/serenity/serenity.css" />
+}
+
+@section scripts {
+    <script src="~/Scripts/MyProject.Web.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            let dialog = new MyProject.Invoice.InvoiceReportDialog();
+            dialog.dialogOpen();
+        });
+    </script>
+}
+
+<div id="ReportPageContent"></div>
